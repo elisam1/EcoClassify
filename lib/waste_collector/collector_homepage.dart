@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/provider/provider.dart';
 import 'package:flutter_application_1/service/greetings.dart';
+import 'package:flutter_application_1/waste_collector/access_route_screen.dart';
 import 'package:flutter_application_1/waste_collector/pending_summary.dart';
 //import 'package:flutter_application_1/user_screen/profile_screen.dart';
 import 'package:flutter_application_1/waste_collector/pickup.dart';
@@ -395,7 +396,10 @@ class _CollectorHomePageState extends State<CollectorHomePage> {
           icon: Icons.navigation,
           color: Colors.green,
           onTap: () {
-            // Start navigation route
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => const AccessRouteScreen()),
+              );
           },
         ),
         _buildQuickActionItem(
